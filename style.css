@@ -1,0 +1,89 @@
+@charset "UTF 8";
+
+@import url('https://fonts.googleapis.com/css2?family=Passion+One& display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+:root {
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: 'Passion One', cursiva;
+    --fonte3: 'Sriracha', cursiva;
+}
+
+*{
+    margin: 0px;  /* essa configuração é para recetar todos os elementos */
+    padding: 0px; /* essa configuração é para recetar todos os elementos */
+}
+html, body {
+    min-height: 100vh; /* tamanho mínimo da largura 100% (html, do site) */
+    background-color: darkgray;
+    font-family: var(--fonte1);
+}
+header {
+    background-color: black;
+    color: white;
+    text-align: center; /*centralizar o cabeçalho */
+    
+}
+header > h1 {
+    padding-top: 50px;
+    font-variant: small-caps; /* esse comando é p/ deixar todas as letras maiusculas e as primeiras maiores que as outras */
+    font-family: var(--fonte2);
+    font-size: 4em; /* é pra aumentar o tamanho do título */
+}
+header > p {
+    padding-bottom: 50px;
+}
+header a, footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+header a:hover, footer a:hover {
+    text-decoration: underline;
+}
+section {
+    padding-top: 10vh; /* conf. faz com que seja 10% da altura , e usar 10vh facilita na adptação do tamanho (ajustável ou responsiva a pag.) */
+    padding-bottom: 10vh; /* conf. faz com que seja 10% a baixo */
+    line-height: 2em; /* espaçamento entre linhas */
+    padding-left: 30px;
+    font-family: var(--fonte3);
+    font-size: 1.3em;
+}
+section > p {
+    padding-bottom: 2em;
+}
+section.normal {
+    background-color: white;
+    color: black;
+}
+section.imagem {
+    background-color: rgb(65, 63, 63);
+    color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.5); /* (inset) quer dizer sombra interna (pra dentro) */
+    background-size: cover; /* é pra melhorar a visualização (expansivo) */
+    background-attachment: fixed; /* essa conf. é para fixar as imagens, ao rolar a pag. */
+}
+section.imagem > p {
+    background-color: rgba(0, 0, 0, 0.39);
+    width: 400px; /* é o tamanho do background-color */
+    padding-left: 5px;
+    text-shadow: 2px 2px 0px black;
+   
+}
+section#img01 {
+    background-image: url('imagens/background001.jpg');
+    background-position: right center;
+   
+}
+section#img02 {
+    background-image: url('imagens/background002.jpg');
+    background-position: right center;
+    
+}
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
